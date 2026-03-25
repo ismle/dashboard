@@ -74,11 +74,9 @@
 
   <div id="main">
     <header class="topbar">
-      <button class="icon-btn hamburger" onclick="toggleSB()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><use href="#i-menu"/></svg></button>
       <span class="topbar-title" id="topbar-title">Dashboard</span>
       <div class="topbar-actions">
         <button class="icon-btn" onclick="toggleDark()" id="theme-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><use href="#i-sun"/></svg></button>
-        <button class="btn btn-primary" onclick="openAddActivity()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-plus"/></svg><span class="btn-label">Log Activity</span></button>
       </div>
     </header>
 
@@ -111,9 +109,9 @@
 
     <!-- ACTIVITIES -->
     <div class="page" id="page-activities">
-      <div class="sh"><div><div class="sh-title">Activity Logger</div><div class="sh-sub">Track all academic activities and scores</div></div>
+      <div class="page-navbar"><div class="sh"><div><div class="sh-title">Activity Logger</div><div class="sh-sub">Track all academic activities and scores</div></div>
         <div style="display:flex;gap:7px;"><button class="btn btn-ghost" onclick="exportCSV()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><use href="#i-dl"/></svg>CSV</button><button class="btn btn-primary" onclick="openAddActivity()"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-plus"/></svg>Add Activity</button></div>
-      </div>
+      </div></div>
       <div class="filter-bar">
         <input class="fli" type="text" id="search-input" placeholder="Search activities…" oninput="renderTable()">
         <select class="fls" id="filter-subject" onchange="renderTable()"><option value="">All Subjects</option></select>
@@ -198,11 +196,11 @@
 
     <!-- SETTINGS -->
     <div class="page" id="page-settings">
-      <div class="sh"><div><div class="sh-title">Settings</div><div class="sh-sub">Manage your account and preferences</div></div></div>
+      <div class="page-navbar"><div class="sh"><div><div class="sh-title">Settings</div><div class="sh-sub">Manage your account and preferences</div></div></div></div>
       <div class="settings-grid">
         <div class="ps-card">
           <div class="card-header"><div class="card-title">Student Profile</div></div>
-          <div class="form-grid" style="grid-template-columns:repeat(3,1fr);">
+          <div class="form-grid" id="profile-form-grid">
             <div class="fg">
                 <label>Full Name</label>
                 <input type="text" id="s-name"></div>
